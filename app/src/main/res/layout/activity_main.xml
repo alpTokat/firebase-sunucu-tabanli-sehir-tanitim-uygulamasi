@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AT_MainActivity">
+
+    <TextView
+        android:id="@+id/AT_txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="54dp"
+        android:text="Adana Yöresel Ürün Oluşturma"
+        android:textColor="#2E7EE1"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/AT_etxt_urun_isim"
+        android:layout_width="275dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="79dp"
+        android:ems="10"
+        android:hint="Ürün ismini giriniz"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AT_txt1" />
+
+    <EditText
+        android:id="@+id/AT_etxt_urun_fiyat"
+        android:layout_width="275dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="79dp"
+        android:ems="10"
+        android:hint="Ürünün fiyatını giriniz"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AT_etxt_urun_isim" />
+
+    <Spinner
+        android:id="@+id/AT_spinner"
+        android:layout_width="275dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="79dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AT_etxt_acıklama" />
+
+    <EditText
+        android:id="@+id/AT_etxt_acıklama"
+        android:layout_width="275dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="79dp"
+        android:ems="10"
+        android:hint="Ürün açıklaması giriniz"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AT_etxt_urun_fiyat" />
+
+    <RadioGroup
+        android:id="@+id/AT_rdg"
+        android:layout_width="253dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="79dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AT_spinner">
+
+        <RadioButton
+            android:id="@+id/AT_rb_nakit"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Nakit" />
+
+        <RadioButton
+            android:id="@+id/AT_rb_kart"
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            android:text="Kredi Kartı" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/AT_cb_mandalin"
+        android:layout_width="110dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="64dp"
+        android:text="Mandalina"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <CheckBox
+        android:id="@+id/AT_cb_portakal"
+        android:layout_width="110dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="36dp"
+        android:text="Portakal"
+        app:layout_constraintEnd_toStartOf="@+id/AT_cb_mandalin"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="275dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="81dp"
+        android:text="   Yanında gönderilecek meyve seçin:"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AT_rdg" />
+
+    <Button
+        android:id="@+id/AT_btn_listview"
+        android:layout_width="247dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="215dp"
+        android:text="listview goster"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AT_cb_mandalin" />
+
+    <Button
+        android:id="@+id/AT_btn_urun_olustur"
+        android:layout_width="250dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="10dp"
+        android:onClick="AT_urunOlustur"
+        android:text="Ürün Oluştur"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AT_btn_listview" />
+
+    <Button
+        android:id="@+id/AT_btn_foto"
+        android:layout_width="250dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="15dp"
+        android:text="Foto Çekim"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AT_cb_mandalin" />
+
+    <ImageView
+        android:id="@+id/AT_iv_foto"
+        android:layout_width="168dp"
+        android:layout_height="137dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AT_btn_foto"
+        tools:srcCompat="@tools:sample/avatars" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
